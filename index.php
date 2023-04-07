@@ -1,6 +1,8 @@
 <?php
 //if($_POST[''])
-file_put_contents('_article.txt', $_POST['input_txt']); //создание файла
+if(isset($_POST['input_txt'])) {
+    file_put_contents('_article.txt', $_POST['input_txt']); //создание файла
+}
 ?>
 
 

@@ -1,6 +1,9 @@
 <?php
 //if($_POST[''])
-file_put_contents('_article.txt', $_POST['input_txt']); //создание файла
+file_put_contents('_note.txt', '', FILE_APPEND); //создание файла
+if(isset($_POST['input_txt'])){
+    file_put_contents('_note.txt', $_POST['input_txt'], FILE_APPEND);
+}
 ?>
 
 
@@ -33,7 +36,7 @@ file_put_contents('_article.txt', $_POST['input_txt']); //создание фа�
 
                     <div class="mb-3">
                         <label for="output_text" class="form-label">Output</label>
-                        <textarea class="form-control" name="output_txt" rows="3"><?php print file_get_contents( "_article.txt" ); ?></textarea>
+                        <textarea class="form-control" name="output_txt" rows="3"><?php print file_get_contents( "_note.txt" ); ?></textarea>
                     </div>
 
                 </form>
